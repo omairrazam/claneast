@@ -25,7 +25,7 @@ body a{
 	
 }
 .top-header{
-	background: image-url('top-header-bg.png') no-repeat 0px 0px;
+	background: image_url('top-header-bg.png') no-repeat 0px 0px;
 	background-size: cover;
 	min-height: 80px;
 }
@@ -1959,4 +1959,6 @@ select {
 }
 
 
-
+.navbar-form{
+	font-size: 90% !important;
+}

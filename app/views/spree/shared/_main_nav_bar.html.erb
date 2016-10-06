@@ -1,4 +1,4 @@
-<nav class="col-md-12">
+<!-- <nav class="col-md-12">
   <div id="main-nav-bar" class="navbar">
     <ul class="nav navbar-nav" data-hook>
       <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
@@ -19,3 +19,32 @@
     </ul>
   </div>
 </nav>
+ -->
+
+
+
+<div class="top-nav">
+      <div class="container">
+        <span class="menu"> </span>
+        <ul>
+          <li class= <%= nav_link_class(spree.root_path) %>><%= link_to spree.root_path do %> Home <span></span><% end %></li>
+          <li class= <%= nav_link_class(spree.products_path)%>><%= link_to spree.products_path do %> Collections <span></span><% end %></li>
+          <li class= <%= nav_link_class(spree.products_path) %>><%= link_to spree.products_path do %> Products <span></span><% end %></li>
+          <li class= <%= nav_link_class(spree.root_path)%>><%= link_to spree.root_path do %> About Us <span></span><% end %></li>
+          <li class= <%= nav_link_class(spree.root_path)%>><%= link_to spree.root_path do %> Careers <span></span><% end %></li>
+          <li class= <%= nav_link_class(spree.root_path)%>><%= link_to spree.root_path do %> Contact Us <span></span><% end %></li>
+
+          <div class="clearfix"> </div>
+        </ul>
+
+      </div>
+    </div>
+    <!--- top-nav -->
+    <!-- script-for-nav -->
+    <script>
+      $(document).ready(function(){
+        $("span.menu").click(function(){
+          $(".top-nav ul").slideToggle(500);
+        });
+      });
+    </script>

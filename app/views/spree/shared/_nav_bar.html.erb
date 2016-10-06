@@ -1,7 +1,34 @@
-<nav class="navbar col-md-8" id="top-nav-bar">
+<!-- <nav class="navbar col-md-8" id="top-nav-bar">
   <ul id="nav-bar" class="nav navbar-nav navbar-right" data-hook>
     <li id="search-bar" data-hook>
-      <%= render :partial => 'spree/shared/search' %>
+      <%#= render :partial => 'spree/shared/search' %>
     </li>
   </ul>
 </nav>
+ -->
+
+ <!-- top-header -->
+  <div class="top-header">
+    <div class="container">
+      <div class="rigister-info">
+        <ul>
+             <!-- links are linked to this li dynmically -->
+        	<li id="search-bar" data-hook>
+            
+          </li>
+          <li id="link-to-cart" data-hook>
+              <noscript>
+                <%= link_to Spree.t(:cart), '/cart' %>
+              </noscript>
+              &nbsp;
+            </li>
+            <script>Spree.fetch_cart()</script>
+
+          <div class="clearfix"> </div>
+        </ul>
+        
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+<!-- /top-header -->

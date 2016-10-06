@@ -9,8 +9,36 @@
                                   @taxon ? @taxon.id : params[:taxon]), 'aria-label' => 'Taxon', class: "form-control" %>
     <% end %>
   </div>
+  
   <div class="form-group">
     <%= search_field_tag :keywords, params[:keywords], :placeholder => Spree.t(:search), class: "form-control" %>
   </div>
-  <%= submit_tag Spree.t(:search), :name => nil, class: "btn btn-success" %>
+  <%= submit_tag 'Search', :name => nil, class: "btn btn-xs " %>
 <% end %>
+
+<!-- 
+ <div class="bottom-header-right">
+            <ul>
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Wishlist</a></li>
+              <li><a href="#">Checkout</a></li>
+            </ul>
+            <div class="search-cart">
+              <div class="search-box">
+                <form>
+                  <input type="text" value="Search..." />
+                  <input type="submit" value="" />
+                </form>
+              </div>
+              <div class="cart-box">
+                <select>
+                  <option> 02 Items</option>
+                  <option> 03 Items</option>
+                  <option> 04 Items</option>
+                </select>
+              </div>
+              <div class="clearfix"> </div>
+            </div>
+  </div> -->
+
+
