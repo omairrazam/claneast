@@ -11,4 +11,24 @@
 <!--[if lt IE 9]>
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
 <![endif]-->
+
+<!-- Custom theme assets --> 
+<!-- #################### !-->
+<%= stylesheet_link_tag 'bootstrap-theme', media: 'screen' %>
+<%= stylesheet_link_tag 'style', media: 'screen' %>
+
+<%= csrf_meta_tags %>
+<%= javascript_include_tag 'spree/frontend/all' %>
+
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Glegoo:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Rochester' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+<!-- #################### !-->
+<!-- Custom theme assets end here -->
+
+
 <%= yield :head %>
