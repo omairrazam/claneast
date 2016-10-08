@@ -5,12 +5,6 @@
 <% #end %>
 
 
-<!-- slideshow section starts -->
-<!-- ######################## -->
-
-
-<!-- ######################## -->
-<!-- slideshow section ends -->
 
 <!-- all products section starts -->
 <!-- ######################## -->
@@ -25,18 +19,26 @@
 <!-- ######################## -->
 <!-- all products section ends -->
 
-<div data-hook="featured_products">
- <h1>Featured Products</h1>
-  <% cache(cache_key_for_products) do %>
-    <%= render :partial => 'spree/shared/products', :locals => { :products => @featured_products } %>
-  <% end %>
+<!-- bottom-grids -->
+<div class="bottom-grids">
+  <div class="container">
+    <div class="col-md-12 bottom-grids-left">
+        <div class="f-products">
+          <h2>Featured Products</h2>
+          <%= render :partial => "spree/shared/products_special", :locals => { :products => @featured_products, :type => 'f' } %>
+        </div>
+        
+        <div class="d-products">
+          <h2>Discounted Products</h2>
+          <%= render :partial => "spree/shared/products_special", :locals => { :products => @discounted_products, :type => 'd' } %>
+      
+        </div>
+    </div>
+    
+    <div class="clearfix"> </div>
+  </div>
 </div>
+<!-- bottom-grids -->
 
-<div data-hook="discounted_products">
- <h1>Discounted Products</h1>
-  <% cache(cache_key_for_products) do %>
-    <%= render :partial => 'spree/shared/products', :locals => { :products => @discounted_products } %>
-  <% end %>
-</div>
 
 

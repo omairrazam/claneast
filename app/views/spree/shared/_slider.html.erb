@@ -1,0 +1,50 @@
+<!-- banner -->
+   <% if Spree::Slide.published.count > 0 %>
+    <div class="banner">
+      <div class="container" style = "padding:0px;">
+        <!--- img-slider -->
+        <div class="img-slider">
+            <!-- start-slider-script-->
+          <%= javascript_include_tag 'responsiveslides.min.js' %>
+           <script>
+              // You can also use "$(window).load(function() {"
+              $(function () {
+                // Slideshow 4
+                $("#slider4").responsiveSlides({
+                  auto: true,
+                  pager: true,
+                  nav: true,
+                  speed: 500,
+                  namespace: "callbacks",
+                  before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                  },
+                  after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                  }
+                });
+          
+              });
+            </script>
+          <!--//End-slider-script-->
+          <!-- Slideshow 4 -->
+              <div  id="top" class="callbacks_container">
+                <ul class="rslides" id="slider4">
+                  <% Spree::Slide.published.order('position ASC').each do |s| %>
+                    <li>
+                      <%= link_to image_tag(s.slide_image.url), url_for(s.link_url) %>
+                      <div class="slider-caption">
+                      <h1><%= s.slide_name %></h1>
+                      <!-- <p>Classically simple and beautifully elegant Hard wearing leather shoes and hand-made with heart </p> -->
+                      </div>
+                    </li>
+                  <% end %>
+                </ul>
+              </div>
+              <div class="clearfix"> </div>
+          </div>
+            <!-- slider -->
+      </div>
+    </div>
+    <!-- banner -->
+<% end %>

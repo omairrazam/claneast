@@ -1,0 +1,30 @@
+
+<!--sreen-gallery-cursual-->
+<div class="sreen-gallery-cursual">
+<!-- requried-jsfiles-for owl -->
+
+<%=  stylesheet_link_tag "owl.carousel.css" %>
+<%= javascript_include_tag    "owl.carousel.js" %>
+    <script>
+    $(document).ready(function() {
+      $("#owl-demo" + "<%= type %>").owlCarousel({
+        items : 3,
+        lazyLoad : true,
+        autoPlay : true,
+        navigation : true,
+        navigationText :  false,
+        pagination : false,
+      });
+    });
+   </script>
+<!-- //requried-jsfiles-for owl -->
+<!-- start content_slider -->
+<div id=<%="owl-demo"+type %> class="row owl-carousel text-center">
+    <% products.each do |product| %>
+      <%= render :partial => "spree/shared/product_special" , :locals => { :product => product } %>
+    <% end %>
+</div>
+
+<!--//sreen-gallery-cursual-->
+              
+        

@@ -20,11 +20,15 @@
   </div>
 </nav>
  -->
-
+<style type="text/css">
+  .container{
+    padding: 0px;
+  }
+</style>
 
 
 <div class="top-nav">
-      <div class="container">
+      <div class="container" >
         <span class="menu"> </span>
         <ul>
           <li class= <%= nav_link_class(spree.root_path) %>><%= link_to spree.root_path do %> Home <span></span><% end %></li>
@@ -33,6 +37,8 @@
           <li class= <%= nav_link_class(spree.root_path)%>><%= link_to spree.root_path do %> About Us <span></span><% end %></li>
           <li class= <%= nav_link_class(spree.root_path)%>><%= link_to spree.root_path do %> Careers <span></span><% end %></li>
           <li class= <%= nav_link_class(spree.root_path)%>><%= link_to spree.root_path do %> Contact Us <span></span><% end %></li>
+          <li class= <%= nav_link_class(spree.root_path)%>><%= link_to spree.root_path do %> Contact Us <span></span><% end %></li>
+          
 
           <div class="clearfix"> </div>
         </ul>

@@ -1,0 +1,21 @@
+<% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
+<div class="item">
+	<div onclick="location.href='single-page.html';" class="product-grid">
+		<div class="product-pic">
+			<%= link_to small_image(product, itemprop: "image"), url, itemprop: 'url' %>
+		</div>
+		<div class="product-pic-info">
+			<h3> <%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %></h3>
+			<div class="product-pic-info-price-cart">
+				<div class="product-pic-info-price">
+					<span><%= display_price(product) %></span>
+					<label> </label>
+				</div>
+				<!-- <div class="product-pic-info-cart">
+					<a class="p-btn" href="#">Buy now</a>
+				</div> -->
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+</div>

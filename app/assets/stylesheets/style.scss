@@ -256,9 +256,10 @@ span.menu{
   float: left;
 }
 .rslides img {
-  height: auto;
+  //height: auto;
+  height: 500px;
   border: 0;
-  width:100%;
+  //width:100%;
 }
 .callbacks_tabs{
 	list-style: none;
@@ -310,7 +311,7 @@ span.menu{
 	text-decoration: none;
 	height: 30px;
 	width: 19px;
-	background: transparent img-url("slide-arrows.png") no-repeat left top;
+	background: transparent image-url("slide-arrows.png") no-repeat left top;
 }
 .callbacks_nav:active {
   opacity: 0.7;
