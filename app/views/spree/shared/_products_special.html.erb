@@ -19,10 +19,11 @@
    </script>
 <!-- //requried-jsfiles-for owl -->
 <!-- start content_slider -->
-<div id=<%="owl-demo"+type %> class="row owl-carousel text-center">
+<div id=<%="owl-demo"+type %> class="owl-carousel text-center">
     <% products.each do |product| %>
       <%= render :partial => "spree/shared/product_special" , :locals => { :product => product } %>
     <% end %>
+</div>
 </div>
 
 <!--//sreen-gallery-cursual-->
