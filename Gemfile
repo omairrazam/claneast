@@ -52,7 +52,7 @@ gem 'spree_gateway', '~> 3.1.0'
 
 gem 'spree_slider', github: 'spree-contrib/spree_slider', branch: '3-1-stable'
 
-gem 'spree_sales', :path => '../spree_sales'
+gem 'spree_sales', :path => 'spree_sales'
 
 gem 'figaro'
 gem 'puma'
