@@ -256,10 +256,9 @@ span.menu{
   float: left;
 }
 .rslides img {
-  //height: auto;
-  height: 500px;
+  height: auto;
   border: 0;
-  //width:100%;
+  width:100%;
 }
 .callbacks_tabs{
 	list-style: none;
@@ -311,7 +310,7 @@ span.menu{
 	text-decoration: none;
 	height: 30px;
 	width: 19px;
-	background: transparent image-url("slide-arrows.png") no-repeat left top;
+	background: transparent image-url("/assets/spree/frontend/slide-arrows.png") no-repeat left top;
 }
 .callbacks_nav:active {
   opacity: 0.7;
@@ -485,7 +484,7 @@ a.p-btn:hover{
 	width:34px;
 	height:34px;
 	display:inline-block;
-	background:img-url('send-ico.png') no-repeat 0px 0px;
+	background:image-url('/assets/spree/frontend/send-ico.png') no-repeat 0px 0px;
 	border:none;
 	outline:none;
 	cursor:pointer;

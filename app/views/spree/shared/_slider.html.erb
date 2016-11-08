@@ -32,10 +32,11 @@
                 <ul class="rslides" id="slider4">
                   <% Spree::Slide.published.order('position ASC').each do |s| %>
                     <li>
-                      <%= link_to image_tag(s.slide_image.url), url_for(s.link_url) %>
+                      <%#= link_to image_tag(s.slide_image.url, class: 'img-responsive'), url_for(s.link_url) %>
+                      <%= image_tag(s.slide_image.url, class: 'img-responsive') %>
                       <div class="slider-caption">
                       <h1><%= s.slide_name %></h1>
-                      <!-- <p>Classically simple and beautifully elegant Hard wearing leather shoes and hand-made with heart </p> -->
+                      <p><%= s.body %> </p> 
                       </div>
                     </li>
                   <% end %>
