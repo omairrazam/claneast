@@ -7,13 +7,6 @@ GIT
       spree_backend (>= 3.1.0.beta)
       spree_core (>= 3.1.0.beta)
 
-GIT
-  remote: https://github.com/spree-contrib/spree_contact_us
-  revision: 83e2b69173c8d32a91dcaeee3d07a942174dde44
-  specs:
-    spree_contact_us (2.2.0)
-      spree_core (~> 3.1.0.beta)
-
 PATH
   remote: spree_sales
   specs:
@@ -390,7 +383,6 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spree (~> 3.1.0)
   spree_auth_devise (~> 3.1.0)
-  spree_contact_us!
   spree_gateway (~> 3.1.0)
   spree_sales!
   spree_slider!

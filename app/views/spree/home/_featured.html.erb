@@ -7,8 +7,8 @@
 <% end %>
 
 <% if @featured_products.present? %>
-  <!-- <div class="f-products d-products">
+  <div class="f-products d-products">
     <h2>Discounted Products</h2>
-    <%#= render :partial => "spree/shared/products_special", :locals => { :products => @discounted_products, :type => 'd' } %>
-  </div> -->
+    <%= render :partial => "spree/shared/products_special", :locals => { :products => @discounted_products, :type => 'd' } %>
+  </div> 
 <% end %>
