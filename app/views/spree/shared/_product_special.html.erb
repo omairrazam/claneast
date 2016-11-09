@@ -1,6 +1,6 @@
 <% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
 <div class="item">
-	<div onclick="location.href='single-page.html';" class="product-grid">
+	<div  class="product-grid">
 		<div class="product-pic">
 			<%= link_to featured_image(product, itemprop: "image"), url, itemprop: 'url' %>
 		</div>

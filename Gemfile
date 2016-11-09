@@ -57,6 +57,7 @@ gem 'spree_sales', :path => 'spree_sales'
 
 gem 'figaro'
 gem 'puma'
+
 group :development do
   gem 'capistrano'
   gem 'capistrano3-puma'
@@ -68,3 +69,6 @@ end
 group :production do
 	gem 'pg'
 end
+
+gem 'spree_contact_us', :git => 'https://github.com/spree-contrib/spree_contact_us'
+

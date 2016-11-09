@@ -5,7 +5,8 @@
         <!--- img-slider -->
         <div class="img-slider">
             <!-- start-slider-script-->
-          <%= javascript_include_tag 'responsiveslides.min.js' %>
+            <script src="/assets/spree/frontend/responsiveslides.min.js"></script>
+          <%#= javascript_include_tag '/assets/spree/frontend/responsiveslides.min.js' %>
            <script>
               // You can also use "$(window).load(function() {"
               $(function () {
@@ -35,8 +36,8 @@
                       <%#= link_to image_tag(s.slide_image.url, class: 'img-responsive'), url_for(s.link_url) %>
                       <%= image_tag(s.slide_image.url, class: 'img-responsive') %>
                       <div class="slider-caption">
-                      <h1><%= s.slide_name %></h1>
-                      <p><%= s.body %> </p> 
+                        <h1><%= s.slide_name %></h1>
+                        <p><%= s.body %> </p> 
                       </div>
                     </li>
                   <% end %>

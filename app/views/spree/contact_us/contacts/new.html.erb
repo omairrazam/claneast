@@ -1,0 +1,69 @@
+<% content_for :head do -%>
+  <meta name="title" content="<%= Spree.t(:contact_us_title) %>">
+<% end -%>
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @contact } %>
+
+<!-- Contact -->
+<div class="Contact">
+  <!-- header-section -->
+  <div class="header-section">
+    <div class="container">
+      <h1>Contact us</h1>
+    </div>
+  </div>
+  <!-- header-section -->
+  <!-- hosting-grids -->
+  <div class="contact-grids">
+    <div class="container">
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3150859.767904157!2d-96.62081048651531!3d39.536794757966845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1408111832978"> </iframe>
+      </div>
+      <div class="contact-bottom-grids">
+        <div class="contact-bottom-grid-left">
+          <h3>Contact info</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum adipiscing vestibulum sapien, in ultricies tellus dignissim eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+          <p> Praesent mollis dolor eros, vel facilisis nisi auctor ut. Cras id convallis ipsum. Mauris posuere, ligula ac sodales sollicitudin, risus sapien iaculis libero, ac molestie orci arcu non ante. Fusce est leo, ornare ut porta quis, dictum et mi. Aliquam vel pretium sem</p>
+        </div>
+        <div class="contact-bottom-grid-right">
+          <h3>Add your Details</h3>
+          <%= form_for @contact, :url => contacts_path, :html => { :novalidate => '' } do |f| %>
+            <div class="text">
+              <div class="text-fild">
+              <% if SpreeContactUs.require_name %>
+                <p>
+                  <span><%= f.label :name %>*</span>
+                  <!-- <span class="required">*</span><br/> -->
+                  <%= f.text_field :name, class: 'text', placeholder: 'Your Name here' %>
+                </p>
+              <% end %>
+              </div>
+              <div class="text-fild">
+                <span><%= f.label :email %>*</span>
+                <%= f.text_field :email, class: 'text', placeholder: "Your Email here" %>
+              </div>
+              <div class="clearfix"> </div>
+            </div>
+            <div class="msg-fild">
+              <% if SpreeContactUs.require_subject %>
+                <span><%= f.label :subject %>*</span>
+                <%= f.text_field :subject, class: 'text', placeholder: 'Your Subject here' %>
+                </p>
+              <% end %>
+            </div>
+
+
+            <div class="message-fild">
+              <span><%= f.label :message %>*</span>
+              <%= f.text_area :message, class: 'test', placeholder: "Enter your message here..." %>
+            </div>
+            <%= f.submit Spree.t(:submit), :alt => Spree.t(:submit), :id => 'contact_us_contact_submit', :title => Spree.t(:submit) %>
+            
+          <% end %>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+  <!-- hosting-grids -->
+</div>
+<!-- /Contact -->

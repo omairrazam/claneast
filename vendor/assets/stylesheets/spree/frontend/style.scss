@@ -25,7 +25,7 @@ body a{
 	
 }
 .top-header{
-	background: image_url('top-header-bg.png') no-repeat 0px 0px;
+	background: image-url('/assets/spree/frontend/top-header-bg.png') no-repeat 0px 0px;
 	background-size: cover;
 	min-height: 80px;
 }
@@ -515,7 +515,7 @@ a.p-btn:hover{
 }
 /*-- footer --*/
 .footer{
-	background: image-url('footer-bg.png') repeat-x 0px 0px #ecebdf;
+	background: image-url('/assets/spree/frontend/footer-bg.png') repeat-x 0px 0px #ecebdf;
 	padding: 4em 0 2em;
 }
 .footer-grid ul{
@@ -594,7 +594,7 @@ a.p-btn:hover{
 	width:64px;
 	height:64px;
 	display:inline-block;
-	background:image-url("social-icons.png") no-repeat 0px 0px;
+	background:image-url("/assets/spree/frontend/social-icons.png") no-repeat 0px 0px;
 }
 .social-icons ul li a span.facebook{
 	background-position:0px 0px;
@@ -648,7 +648,7 @@ a.p-btn:hover{
 	width:35px;
 	height:24px;
 	display:inline-block;
-	background:image-url('cards.png') no-repeat 0px 0px;
+	background:image-url('/assets/spree/frontend/cards.png') no-repeat 0px 0px;
 }
 .footer-bottom-right ul li span.visa{
 	background-position:0px 0px;
