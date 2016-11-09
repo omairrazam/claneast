@@ -2,11 +2,11 @@ module Spree
   HomeController.class_eval do
   	before_action :discounted_products, only: :index
   	
-  	# def careers
-  	# end
+  	def careers
+  	end
 
-  	# def about_us
-  	# end
+  	def about_us
+  	end
   	
   	private
   	def discounted_products
