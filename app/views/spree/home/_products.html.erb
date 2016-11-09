@@ -28,7 +28,7 @@
 <div id="products" class="top-grids" data-hook>
   <div class="container">
     <% products.each do |product| %>
-      <%#= render :partial => "spree/shared/product" , :locals => { :product => product } %>
+      <%= render :partial => "spree/shared/product" , :locals => { :product => product } %>
     <% end %>
     <% reset_cycle("classes") %>
     
